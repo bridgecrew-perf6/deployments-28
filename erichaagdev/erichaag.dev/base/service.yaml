@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: erichaag-dev
+  labels:
+    app: erichaag-dev
+spec:
+  selector:
+    app: erichaag-dev
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80

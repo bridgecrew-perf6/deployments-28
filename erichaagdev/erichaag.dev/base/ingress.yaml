@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: erichaag-dev
+  labels:
+    app: erichaag-dev
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: erichaag.dev
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: erichaag-dev
+            port:
+              number: 80
+  tls:
+  - hosts:
+    - erichaag.dev
+    secretName: erichaag-dev-tls
