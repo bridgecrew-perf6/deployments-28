@@ -4,4 +4,4 @@ resources:
 - ../base
 images:
 - name: ghcr.io/erichaagdev/erichaag.dev
-  newTag: de7f773
+  newTag: "9843326"
